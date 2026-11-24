@@ -1,0 +1,48 @@
+{
+  "model": {
+    "type": "condition",
+    "property": "using_item",
+    "on_false": {
+      "type": "range_dispatch",
+      "base": "item/shield",
+      "property": "custom_model_data",
+      "model": {
+        "type": "shield"
+      },
+      "entries": [
+        {
+          "threshold": 1,
+          "model": { 
+            "type": "model", 
+            "base": "item/round_shield", 
+            "model": "item/round_shield" 
+        }
+        }
+      ],
+      "fallback": { 
+        "type": "special",
+        "base": "item/shield",
+        "model": {"type": "shield"}
+     }
+    },
+    "on_true": {
+      "type": "range_dispatch",
+      "base": "item/shield_blocking",
+      "property": "custom_model_data",
+      "model": {
+        "type": "shield"
+      },
+      "entries": [
+        {
+          "threshold": 1,
+          "model": { "type": "model", "model": "item/round_shield_blocking" }
+        }
+      ],
+      "fallback": { 
+        "type": "special",
+        "base": "item/shield_blocking",
+        "model": {"type": "shield"}
+        }
+    }
+  }
+}

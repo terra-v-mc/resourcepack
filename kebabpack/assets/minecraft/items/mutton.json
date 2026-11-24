@@ -1,0 +1,27 @@
+{
+  "model": {
+    "type": "range_dispatch",
+    "property": "custom_model_data",
+    "entries": [
+      {
+        "threshold": 1,
+        "model": {
+          "type": "model",
+          "model": "item/doner"
+        }
+      },
+      {
+        "threshold": 2,
+        "model": {
+          "type": "model",
+          "model": "item/kebab_meat"
+        }
+      }
+    
+    ],
+    "fallback": {
+      "type": "model",
+      "model": "item/mutton"
+    }
+  }
+}
